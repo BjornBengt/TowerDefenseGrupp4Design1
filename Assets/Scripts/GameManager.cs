@@ -23,6 +23,16 @@ public class PlayerData
         PlayerHealth = PlayerMaxHealth;
         PlayerMoney = 0;
     }
+
+    public void GetMoney(int money)
+    {
+        PlayerMoney += money;
+    }
+
+    void Update()
+    {
+        Debug.Log(PlayerMoney);
+    }
 }
 public class GameManager : MonoBehaviour
 {

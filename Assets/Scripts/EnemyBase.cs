@@ -11,6 +11,8 @@ public class EnemyBase : MonoBehaviour
     public Enemy EnemyData = new Enemy();
     [Header("Static References")]
     public TextMeshProUGUI EnemyHealth = null;
+
+    [SerializeField] private PlayerData player;
     public void Initialize(Vector3 aMovementDirection, Enemy aEnemyContainer = null)
     {
         if(aEnemyContainer != null)
@@ -24,6 +26,7 @@ public class EnemyBase : MonoBehaviour
     public void ImpactDamage(int aDamageNr)
     {
         EnemyData.Health -= aDamageNr;
+        player.GetMoney(EnemyData.MoneyOnKill);
         if(EnemyData.Health < 0 )
         {
             GameManager.GlobalGameManager.CurrentPlayerData.PlayerMoney += EnemyData.MoneyOnKill;
