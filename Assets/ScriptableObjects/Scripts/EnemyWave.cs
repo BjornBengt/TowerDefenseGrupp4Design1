@@ -13,7 +13,7 @@ public class Enemy
     [Header("Enemy Stats")]
     public int MaxHealth = 1;
     public int Damage = 1;
-    public int MoneyOnKill = 0;
+    public int MoneyOnKill = 1;
     public float MoveSpeed = 1.0f;
 
     [Header("Dynamic Values")]
