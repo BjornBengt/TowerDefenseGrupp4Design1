@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 /*
 THE MASTER BECOMES 
 A HUMAN FURNACE
@@ -109,6 +110,11 @@ public class GameManager : MonoBehaviour
             if(PlayerHealthText != null)
             {
                 PlayerHealthText.text = CurrentPlayerData.PlayerHealth.ToString() + " HP";
+
+                if (CurrentPlayerData.PlayerHealth <= 0)
+                {
+                    SceneManager.LoadScene(1);
+                }
             }
             GameObject.Destroy(enemyCollider.gameObject);
         }

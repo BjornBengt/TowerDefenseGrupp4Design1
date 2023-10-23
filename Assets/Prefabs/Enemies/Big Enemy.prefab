@@ -248,8 +248,8 @@ GameObject:
   - component: {fileID: 6397048044133943444}
   - component: {fileID: 3644953591774124894}
   - component: {fileID: 3699783050826291522}
-  - component: {fileID: 2422741794814135565}
   - component: {fileID: 4539985223128810706}
+  - component: {fileID: 2422741794814135565}
   m_Layer: 0
   m_Name: Big Enemy
   m_TagString: Untagged
@@ -344,26 +344,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2422741794814135565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7361977620993004290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyData:
-    SpawnDelay: 0
-    MaxHealth: 10
-    Damage: 3
-    MoveSpeed: 1
-    Health: 0
-    MovementDirection: {x: 0, y: 0, z: 0}
-  EnemyHealth: {fileID: 2921149102124915584}
 --- !u!54 &4539985223128810706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -391,3 +371,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &2422741794814135565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361977620993004290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyData:
+    SpawnDelay: 0
+    MaxHealth: 10
+    Damage: 3
+    MoneyOnKill: 0
+    MoveSpeed: 1
+    Health: 0
+    MovementDirection: {x: 0, y: 0, z: 0}
+  EnemyHealth: {fileID: 2921149102124915584}

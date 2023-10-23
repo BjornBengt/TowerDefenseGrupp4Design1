@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1074548066358425395}
   - component: {fileID: 3848548275497854225}
   - component: {fileID: 6892995402184784869}
-  - component: {fileID: 3890603826980905104}
   - component: {fileID: 1456282249521112694}
+  - component: {fileID: 3890603826980905104}
   m_Layer: 0
   m_Name: Lagom Enemy
   m_TagString: Untagged
@@ -108,26 +108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9426444, y: 2.1132958, z: 1.0648872}
   m_Center: {x: 0.03541819, y: -0.013980031, z: 0.08902756}
---- !u!114 &3890603826980905104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564064010844980008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyData:
-    SpawnDelay: 0
-    MaxHealth: 3
-    Damage: 2
-    MoveSpeed: 4
-    Health: 0
-    MovementDirection: {x: 0, y: 0, z: 0}
-  EnemyHealth: {fileID: 4929589745625190100}
 --- !u!54 &1456282249521112694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -155,6 +135,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &3890603826980905104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564064010844980008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyData:
+    SpawnDelay: 0
+    MaxHealth: 3
+    Damage: 2
+    MoneyOnKill: 0
+    MoveSpeed: 4
+    Health: 0
+    MovementDirection: {x: 0, y: 0, z: 0}
+  EnemyHealth: {fileID: 4929589745625190100}
 --- !u!1 &5846406199469672002
 GameObject:
   m_ObjectHideFlags: 0

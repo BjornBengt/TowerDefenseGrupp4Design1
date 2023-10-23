@@ -248,8 +248,8 @@ GameObject:
   - component: {fileID: 8855677022795685953}
   - component: {fileID: 1325040423827955640}
   - component: {fileID: 7531373189356319802}
-  - component: {fileID: 111907758415992350}
   - component: {fileID: 798521652817129914}
+  - component: {fileID: 111907758415992350}
   m_Layer: 0
   m_Name: Smol Enemy
   m_TagString: Untagged
@@ -344,26 +344,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &111907758415992350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8079762548996616561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyData:
-    SpawnDelay: 0
-    MaxHealth: 1
-    Damage: 1
-    MoveSpeed: 1
-    Health: 0
-    MovementDirection: {x: 0, y: 0, z: 0}
-  EnemyHealth: {fileID: 6251655040771547274}
 --- !u!54 &798521652817129914
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -391,3 +371,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &111907758415992350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8079762548996616561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6025eae1a0ce94089b4ed776f62eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyData:
+    SpawnDelay: 0
+    MaxHealth: 1
+    Damage: 1
+    MoneyOnKill: 0
+    MoveSpeed: 10
+    Health: 0
+    MovementDirection: {x: 0, y: 0, z: 0}
+  EnemyHealth: {fileID: 6251655040771547274}
