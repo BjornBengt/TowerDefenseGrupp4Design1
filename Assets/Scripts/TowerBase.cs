@@ -81,9 +81,9 @@ public class TowerBase : MonoBehaviour
         while (currentWave.Bullets.Count > CurrentBullet)
         {
             var currentBullet = currentWave.Bullets[CurrentBullet];
-           BulletDelayTimer += Time.deltaTime;
-
-            if (BulletDelayTimer >= currentBullet.FireDelay)
+            BulletDelayTimer += Time.deltaTime;
+            
+            if (BulletDelayTimer >= currentBullet.FireDelay && LockedOnTargetEnemy != null)
             {
                 var bulletSpawn = GameManager.GlobalGameManager.SpawnObject(currentBullet.SpawnKey.name, transform.position);
                 var bulletComponent = bulletSpawn.GetComponent<BulletBase>();
