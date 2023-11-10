@@ -28,6 +28,7 @@ public class PlayerData
     public void GetMoney(int money)
     {
         PlayerMoney += money;
+        Debug.Log("Get money");
     }
 
     void Update()
