@@ -3,17 +3,14 @@ using UnityEngine;
 public class PlaceTower : MonoBehaviour
 {
     Camera myCamera;
-    PlayerData playerData;
     [SerializeField] GameObject towerPrefabToPlace;
     [SerializeField] GameObject endzoneManager;
     [SerializeField] LayerMask canPlaceOnLayers;
-    [SerializeField] float towerOffsetY = 3.5f;
     [SerializeField] int towerCost;
 
     void Start()
     {
         myCamera = Camera.main;
-        playerData = endzoneManager.GetComponent<PlayerData>();
     }
 
     void Update()
@@ -33,10 +30,9 @@ public class PlaceTower : MonoBehaviour
             if (Physics.Raycast(raycast, out raycastHit, 100, canPlaceOnLayers)) 
             {
                 print("raycastHit " + raycastHit.point);
-                Vector3 towerPlacement = new Vector3(raycastHit.transform.position.x, raycastHit.transform.position.y + towerOffsetY, raycastHit.transform.position.z);
+                Vector3 towerPlacement = raycastHit.point;
                 print("towerPlacement " + towerPlacement.y);
                 Instantiate(towerPrefabToPlace, towerPlacement, Quaternion.identity);
-                playerData.GetMoney(-towerCost);
             }
         }
     }
